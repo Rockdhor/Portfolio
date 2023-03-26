@@ -1,0 +1,33 @@
+{
+  "name": "pfolio",
+  "version": "1.0.0",
+  "description": "A portfolio, no more, no less.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rockdhor/pfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rockdhor/pfolio/issues"
+  },
+  "homepage": "https://github.com/Rockdhor/pfolio#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "less-loader": "^11.1.0",
+    "sass-loader": "^13.2.1",
+    "style-loader": "^3.3.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha2"
+  }
+}
