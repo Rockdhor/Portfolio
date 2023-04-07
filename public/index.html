@@ -21,6 +21,7 @@
 <style>
         body {
             font-family: 'IBM Plex Sans', sans-serif;
+            text-transform: lowercase;
         }
         nav {
             background-color: none;
@@ -94,7 +95,6 @@
         .skillbox {
           text-align: center;
           margin-right: 1vw;
-          color: blanchedalmond;
         }
 
         .skillbox i {
@@ -124,30 +124,120 @@
         }
 
         .projectbox {
-          border: #fa8072 solid 1px;
-          width: 55vw;
-          box-shadow: salmon 25vw 10vw;
+          border: none;
+          border-radius: 0;
+          border-left: salmon solid 1vw;
+          background-color: rgba(245, 245, 245, .1);
+          margin-bottom: 3vh;
+          transition: 1s;
         }
-        
+
+        .projectbox:hover {
+          background-color: rgba(245, 245, 245, .2);
+          border-left: salmon solid .5vw;
+        }
+
+        @keyframes hoverlight {
+          100% {
+            background-color: rgba(245, 245, 245, .2);
+          }
+        }
+
+        .btn-salmon {
+          border: 0px solid rgba(0, 0, 0, 0.431);
+          background-color: none;
+          border-radius: 0px;
+          transition: 1s;
+          border-bottom: salmon 1px solid;
+        }
+
+        .btn-salmon:hover {
+          background-color: salmon
+        }
+
+        .project-link {
+          text-decoration: none;
+        }
+
+        .card-title {
+          text-shadow: 1px 1px salmon;
+        }
+
+        .git-icon {
+          text-decoration: none;
+          color: salmon;
+        }
+
+        .notebox{
+          border-radius: 0;
+          border-width: 3px;
+          box-shadow: .75vw .75vw salmon;
+          padding: 1vw;
+          transition: .5s;
+          background-color: #212529;
+        }
+
+        .notebox:hover {
+          animation: spinBorder infinite 2s both;
+          background-color: #343a40;
+          box-shadow: 0vw .5vw salmon;
+          bottom: .1vh;
+        }
+
+        #contact {
+          background-color: #fac372;
+        }
+
+        #e-mail {
+          cursor: pointer;
+        }
+        #e-mail:hover {
+          text-decoration: underline;
+        }
+
+        #mailArrow {
+          animation: pointLeft 2s infinite both;
+        }
+
+        @keyframes pointLeft {
+            0% {
+                padding-left: 0;
+            }
+            50%{
+              padding-left: 1vw;
+                white-space: nowrap;
+            }
+            100% {
+              padding-left: 0vw;
+            }
+        }
+
+        .link {
+          margin-right: 1vw;
+        }
+
     </style>
 </head>
 <body class="bg-dark">
     <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><span class="allen">allen</span> schmerler</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand nav-link" href="#" id="nav-hero"><span class="allen">allen</span> schmerler</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#about">about</a>
+                <a class="nav-link" aria-current="page" href="#about" id="nav-about">about</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#projects">projects</a>
+                <a class="nav-link" href="#projects" id="nav-projects">projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">contact me</a>
+                <a class="nav-link" href="#notes" id="nav-notes">notes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact" id="nav-contact">contact me</a>
               </li>
             </ul>
           </div>
@@ -189,7 +279,7 @@
               <h2>toolbox</h2>
               <p class="fs-5">these are some of the skills and tools under my belt.</p>
               <div id="skills" class="d-flex flex-wrap justify-content-center">
-                
+                <!-- Skills -->
               </div>
             </div>
           </div>
@@ -197,28 +287,65 @@
 
       </div>
       <hr class="divisor">
-      <div class="jumbotron jumbotron-fluid text-light" id="projects">
+      <div class="jumbotron jumbotron-fluid text-light mb-5" id="projects">
         <div class="container">
           <h1>projects</h1>
           <hr>
-          <h2>let's see</h2>
-          <div id="projectscontainer" class="d-flex flex-wrap justify-content-center">
-            <div class="projectbox">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quasi nostrum repellat similique tempora delectus aperiam corporis dicta necessitatibus. At vitae dolores laudantium tenetur tempore minus optio cumque itaque totam.</p>
-            </div>
+          <h2 class="mb-4">here's some of my work</h2>
+          <div class="accordion accordion-flush d-flex flex-wrap justify-content-center" id="projectscontainer">
+            <!-- Projects -->
+          </div>
             
+          <h2>if you're interested in anything else i invite you to contact me or check my github out</h2>
+          </div>
+          
+        </div>
+
+      </div>
+
+      <div class="jumbotron jumbotron-fluid text-light mb-5" id="notes">
+        <div class="container">
+          <h1>notes</h1>
+          <hr>
+          <div id="notescontainer" class="d-flex flex-wrap justify-content-around">
+            <!-- Notes -->
           </div>
         </div>
 
       </div>
-      <hr class="divisor">
-      <div class="jumbotron jumbotron-fluid text-light" id="contact">
+
+      <div class="jumbotron jumbotron-fluid screenfull d-flex align-items-center" id="contact">
         <div class="container">
           <h1>contact me</h1>
           <hr>
+          <h2 class="fs-1">let's connect</h2>
+          <p class="fs-3">if you want to reach out for absolutely any reason, my inbox is always open</p>
+          <p class="fs-3">e-mail me at: <span class="allen" id="e-mail">allenschmerler at gmail dot com</span> <i class="bi bi-arrow-left mx-auto" id="mailArrow"></i></p>
+          <p class="fs-3">you can also use any of my social media links</p>
+          <div class="fs-3 mb-3 d-flex " id="links">
+            <div>
+              <a href="https://github.com/Rockdhor" class="allen link" target="_blank">github</a>
+            </div>
+            <div>
+              <a href="https://www.linkedin.com/in/allen-schmerler" class="allen link" target="_blank">linkedin</a>
+            </div>
+          </div>
+          <div class="fs-3" id="footer"></div>
         </div>
 
       </div>
       
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast bg-dark text-light  role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong class="me-auto">Allen Schmerler</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Copied the e-mail address to the clipboard succesfully!
+          </div>
+        </div>
+      </div>
+
     </body>
 </html>
