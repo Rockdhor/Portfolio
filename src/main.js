@@ -146,7 +146,7 @@ populateSkills(skills)
 projects = [
     project("SchBanking", 
     "A web banking application that allows an user to open checking accounts, perform transactions, view their account history and much more.", 
-    "", 
+    "public/banking.png", 
     "https://github.com/Rockdhor/SchBanking", 
     "https://ass24-prod.herokuapp.com/")
 ,
