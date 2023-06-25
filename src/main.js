@@ -144,6 +144,12 @@ skills =
 populateSkills(skills)
 
 projects = [
+    project("SchBanking", 
+    "A web banking application that allows an user to open checking accounts, perform transactions, view their account history and much more.", 
+    "", 
+    "https://github.com/Rockdhor/SchBanking", 
+    "https://ass24-prod.herokuapp.com/")
+,
     project("NotesAPI", 
     "A simple API for... notes. Like tiny blog posts, just a title, some text and a timestamp. You can see it in action on the notes section of this website! ", 
     "public/notesapi.png", 
@@ -154,7 +160,9 @@ projects = [
     "A basic URL shortener. Provide it with an URL and check if your desired shortened ID is available and you'll have your own https://shortyURL.rockdhor.repl.co/api/shorturl/ link! That's actually kind of long... but it's the thought that counts?", 
     "public/shortyURL.png", 
     "https://github.com/Rockdhor/shortyURL", 
-    "https://shortyURL.rockdhor.repl.co")
+    "https://shortyURL.rockdhor.repl.co"),
+
+    
 ]
 populateProjects(projects)
 
