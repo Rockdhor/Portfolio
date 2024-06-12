@@ -57,7 +57,7 @@ function populateProjects(projects) {
 function populateNotes() {
     let notesDiv = document.getElementById("notescontainer");
     let req = new XMLHttpRequest();
-    req.open('GET', "https://notesapi.rockdhor.repl.co/latest/3");
+    req.open('GET', "https://c87abbf1-d3aa-4dc5-b0ce-d051982f3c56-00-2ifoihdy6cjp0.riker.replit.dev/latest/3");
     req.send();
     req.onload = () => {
         if (req.status == 200) {
