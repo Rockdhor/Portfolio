@@ -1,15 +1,8 @@
 'use client';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { Toast, ToastContainer } from 'react-bootstrap';
 
-/* 
-  There's a piece of JS logic here to make a toast pop up when the e-mail address is pressed.
-  It is importing vanilla bootstrap for the toast which tries to access the document (which we don't use in here.)
-  Currently it seems to be inconsequential but let's take note to fix it whenever possible by using the toast from the react-bootstrap module.
-*/
-
 export function Contact() {
-  const toastRef = useRef(null)
   const [show, setShow] = useState(false);
   return (
     <div>
@@ -51,11 +44,6 @@ export function Contact() {
       >
         <Toast className='bg-dark text-light' onClose={() => setShow(false)} show={show} delay={3000} autohide>
           <Toast.Header>
-            <img
-              src="holder.js/20x20?text=%20"
-              className="rounded me-2"
-              alt=""
-            />
             <strong className="me-auto">Allen Schmerler</strong>
           </Toast.Header>
           <Toast.Body>Copied the e-mail address to the clipboard succesfully!</Toast.Body>
