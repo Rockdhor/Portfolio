@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;400&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css');
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-transform: lowercase;
+}
+nav {
+  background-color: none;
+}
+.screenfull {
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 8vw;
+  font-weight: 900;
+  text-shadow: 2px 2px #fa8072;
+}
+.hero-subheader:hover {
+  animation: wobble 1s infinite both;
+}
+@keyframes wobble {
+  0% {
+      margin-left: 0;
+  }
+  50%{
+      margin-left: 1vw;
+      white-space: nowrap;
+  }
+  100% {
+      margin-left: 0vw;
+  }
+}
+.allen {
+color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity));
+  background-color: salmon;
+  text-shadow: none;
+}
+
+.allen:hover {
+  color: white;
+  background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;;
+  text-shadow: 2px 2px salmon;
+}
+#down-arrow {
+display: flex;
+
+align-items: center;
+color: white;
+font-size: 3em;
+text-shadow: 1px 1px salmon;
+
+}
+
+#down-arrow i {
+position: relative;
+animation: float 2.5s infinite both;
+cursor:pointer;
+}
+@keyframes float {
+0% {
+  top: 15vh;
+}
+50% {
+  top: 20vh;
+}
+100% {
+  top: 15vh;
+}
+}
+
+
+#skills {
+}
+
+.skillbox {
+text-align: center;
+margin-right: 1vw;
+}
+
+.skillbox i {
+font-size: 8vh;
+}
+.skillbox p {
+
+}
+
+#description {
+
+text-align: justify;
+
+}
+
+h2 {
+text-decoration: underline salmon;
+}
+
+#sapphire {
+text-shadow: 1px 1px #C03440;
+background-color: #1564B0;
+}
+
+#projectscontainer {
+
+}
+
+.projectbox {
+border: none;
+border-radius: 0;
+border-left: salmon solid 1vw;
+background-color: rgba(245, 245, 245, .1);
+margin-bottom: 3vh;
+transition: 1s;
+}
+
+.projectbox:hover {
+background-color: rgba(245, 245, 245, .2);
+border-left: salmon solid .5vw;
+}
+
+@keyframes hoverlight {
+100% {
+  background-color: rgba(245, 245, 245, .2);
+}
+}
+
+.btn-salmon {
+border: 0px solid rgba(0, 0, 0, 0.431);
+background-color: none;
+border-radius: 0px;
+transition: 1s;
+border-bottom: salmon 1px solid;
+}
+
+.btn-salmon:hover {
+background-color: salmon
+}
+
+.project-link {
+text-decoration: none;
+}
+
+.card-title {
+text-shadow: 1px 1px salmon;
+}
+
+.git-icon {
+text-decoration: none;
+color: salmon;
+}
+
+.notebox{
+border-radius: 0;
+border-width: 3px;
+box-shadow: .75vw .75vw salmon;
+padding: 1vw;
+transition: .5s;
+background-color: #212529;
+}
+
+.notebox:hover {
+animation: spinBorder infinite 2s both;
+background-color: #343a40;
+box-shadow: 0vw .5vw salmon;
+bottom: .1vh;
+}
+
+#contact {
+background-color: #fac372;
+}
+
+#e-mail {
+cursor: pointer;
+}
+#e-mail:hover {
+text-decoration: underline;
+}
+
+#mailArrow {
+animation: pointLeft 2s infinite both;
+}
+
+@keyframes pointLeft {
+  0% {
+      padding-left: 0;
+  }
+  50%{
+    padding-left: 1vw;
+      white-space: nowrap;
+  }
+  100% {
+    padding-left: 0vw;
+  }
+}
+
+.link {
+margin-right: 1vw;
+}
