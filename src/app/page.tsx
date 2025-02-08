@@ -178,21 +178,7 @@ function Notes() {
   )
 }
 
-function Popup() {
-  return(
-    <div className="toast-container position-fixed bottom-0 end-0 p-3">
-        <div id="liveToast" className="toast bg-dark text-light"  role="alert" aria-live="assertive" aria-atomic="true">
-          <div className="toast-header">
-            <strong className="me-auto">Allen Schmerler</strong>
-            <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-          </div>
-          <div className="toast-body">
-            Copied the e-mail address to the clipboard succesfully!
-          </div>
-        </div>
-      </div>
-  )
-}
+
 
 export default function Home() {
   return (
@@ -202,11 +188,10 @@ export default function Home() {
       <hr className="divisor"/>
       <About/>
       <hr className="divisor"/>
+      <hr className="divisor"/>
       <Projects/>
       <Notes/>
       <Contact/>
-      <Popup/>
-      
     </div>
   );
   
