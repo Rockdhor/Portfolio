@@ -85,10 +85,10 @@ function About() {
           <div className="row">
             <div className="col-12 col-md-6 text-justify fs-5" id="description">
               <h2>who am i?</h2>
-              <p>my name's <span className="allen">allen</span>. but you knew this already, right?</p>
-              <p>professionally speaking i'm a <span className="allen">software developer</span> with (or at least pretty soon if you're reading this before the middle of may) a <span className="allen text-lowercase">B.S. in Computer Science</span>.</p>
+              <p>my name&apos;s <span className="allen">allen</span>. but you knew this already, right?</p>
+              <p>professionally speaking i&apos;m a <span className="allen">software developer</span> with (or at least pretty soon if you&apos;re reading this before the middle of may) a <span className="allen text-lowercase">B.S. in Computer Science</span>.</p>
               <p>i grew up consuming amazing pieces of software (looking at you <span className="allen">pokemon sapphire</span>) so nowadays i strive to put some of that out there too. so hey, pretty convenient that i also enjoy making things a lot.</p>
-              <p>aside from the obvious stuff i really enjoy trying new things out and you can probably find me <span className="allen">drinking tea</span> and <span className="allen">consuming art</span> (<span id="art">that's just code for watching a movie, playing some game or meddling with some poetry</span>)</p>
+              <p>aside from the obvious stuff i really enjoy trying new things out and you can probably find me <span className="allen">drinking tea</span> and <span className="allen">consuming art</span> (<span id="art">that&apos;s just code for watching a movie, playing some game or meddling with some poetry</span>)</p>
             </div>
             <div className="col-12 col-md-6 ">
               <h2>toolbox</h2>
@@ -112,7 +112,7 @@ function About() {
 
 function Projects() {
   const projects = [
-    { title: "SchBanking", description: "A web banking application that allows an user to open checking accounts, perform transactions, view their account history and much more.", img: bankingimg, git: "https://github.com/Rockdhor/SchBanking", live : "https://ass24-prod.herokuapp.com/" },
+    { title: "SchBanking", description: "A web banking application that allows an user to open checking accounts, perform transactions, view their account history and much more.", img: bankingimg, git: "https://github.com/Rockdhor/SchBanking", live : true ? "" : "https://ass24-prod.herokuapp.com/" },
     { title: "what2play", description: "A tiny app that recommends a game to play based on your mood.", img: what2playimg, git: "https://github.com/Rockdhor/what2play", live : "https://whattoplay.vercel.app" },
     
   ];
@@ -121,7 +121,7 @@ function Projects() {
         <div className="container">
           <h1>projects</h1>
           <hr/>
-          <h2 className="mb-4">here's some of my work</h2>
+          <h2 className="mb-4">here&apos;s some of my work</h2>
           <div className="accordion accordion-flush d-flex flex-wrap justify-content-center" id="projectscontainer">
             {/*<!-- Projects -->*/
               projects.map((project) => (
@@ -137,13 +137,13 @@ function Projects() {
                             <h5 className="card-title fs-1">{project.title}</h5>
                           </div>
                           <div className="col-1 d-flex align-items-center justify-content-center">
-                            <a target="_blank" className="git-icon" href="'+i.git+'">
+                            <a target="_blank" className="git-icon" href={project.git}>
                               <i className="devicon-github-plain"></i>
                             </a>
                           </div>
                         </div>
                         <p className="card-text">{project.description}</p>
-                        <a className="project-link text-light" href="'+i.live+'" target="_blank" ><button type="button" className="btn btn-salmon text-light ">Try it out</button></a>
+                        <a className="project-link text-light" href={project.live} target="_blank" ><button type="button" className="btn btn-salmon text-light ">Try it out</button></a>
                       </div>
                     </div>
                   </div>
@@ -152,7 +152,7 @@ function Projects() {
             }
           </div>
             
-          <h2>if you're interested in anything else i invite you to contact me or check my github out</h2>
+          <h2>if you&apos;re interested in anything else i invite you to contact me or check my github out</h2>
           </div>
           
         
@@ -170,7 +170,7 @@ function Notes() {
             {/*<!-- Notes -->*/
             
             }
-            <p>Normally, you'd have a nice little section here with nice little post it notes. someone hates fun so this isn't a thing anymore. i'm working on it!</p>
+            <p>Normally, you&apos;d have a nice little section here with nice little post it notes. someone hates fun so this isn&apos;t a thing anymore. i&apos;m working on it!</p>
           </div>
         </div>
 

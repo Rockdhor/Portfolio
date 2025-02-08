@@ -1,5 +1,5 @@
 'use client';
-// @ts-ignore
+// @ts-nocheck
 import Toast from 'bootstrap/js/dist/toast.js' 
 import { useRef } from 'react';
 
@@ -17,7 +17,7 @@ export function Contact() {
       <div className="container">
         <h1>contact me</h1>
         <hr />
-        <h2 className="fs-1">let's connect</h2>
+        <h2 className="fs-1">let&apos;s connect</h2>
         <p className="fs-3">if you want to reach out for absolutely any reason, my inbox is always open</p>
         <p className="fs-3">e-mail me at: <span className="allen" id="e-mail" onClick={() => (
           navigator.clipboard.writeText("allenschmerler at gmail dot com".replace(" at ", "@").replace(" dot ", ".")).then(() => Toast.getOrCreateInstance(toastRef.current!).show())
