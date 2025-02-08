@@ -6,7 +6,7 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import "./globals.css";
 
 
-const geistSans = Geist({
+/*const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
@@ -14,7 +14,7 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+});*/
 
 export const metadata: Metadata = {
   title: "Create Next App",

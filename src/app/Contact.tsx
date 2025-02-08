@@ -1,5 +1,6 @@
 'use client';
-import Toast from 'bootstrap/js/dist/toast.js' // @ts-ignore
+// @ts-ignore
+import Toast from 'bootstrap/js/dist/toast.js' 
 import { useRef } from 'react';
 
 /* 

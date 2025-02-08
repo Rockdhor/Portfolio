@@ -1,5 +1,4 @@
 import Image from "next/image";
-import styles from "./page.module.css";
 import what2playimg from './assets/images/what2play.png'
 import bankingimg from './assets/images/banking.png'
 import { Contact } from "./Contact";
