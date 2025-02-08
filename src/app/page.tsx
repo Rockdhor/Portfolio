@@ -4,6 +4,7 @@ import what2playimg from './assets/images/what2play.png'
 import bankingimg from './assets/images/banking.png'
 import { Contact } from "./Contact";
 
+
 function Navbar() {
   const navItems = [
     { href: "#about", id: "nav-about", text: "About" },
