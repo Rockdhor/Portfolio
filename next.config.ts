@@ -6,7 +6,9 @@ const nextConfig: NextConfig = {
   assetPrefix: '/Portfolio',
   images: {
     unoptimized: true
-  }
+  },
+  title: "allen schmerler | portfolio",
+  description: "Software Engineer Allen Schmerler's Portfolio",
 };
 
 export default nextConfig;
