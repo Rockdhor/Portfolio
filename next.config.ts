@@ -7,8 +7,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  title: "allen schmerler | portfolio",
-  description: "Software Engineer Allen Schmerler's Portfolio",
 };
 
 export default nextConfig;
