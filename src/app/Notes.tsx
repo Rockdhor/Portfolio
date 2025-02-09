@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore , collection, addDoc, getDocs, limit, orderBy, query} from "firebase/firestore";
+import { getFirestore , collection, getDocs, limit, orderBy, query, DocumentData} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAUn094jTiIl3YdMrcfDuw8oYgASssj-DE",
@@ -13,10 +13,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-let notes: any[] = []
+
 
 async function queryForDocuments() {
-  const results: any[] = []
+  const results: DocumentData[] = []
   const notesQuery = query(
     collection(db, "notes"),
     orderBy("Created", "desc"),
@@ -26,10 +26,9 @@ async function queryForDocuments() {
 
 const querySnapshot = await getDocs(notesQuery);
 
-const allDocs = querySnapshot.forEach((snap) => {
+querySnapshot.forEach((snap) => {
   results.push(snap.data());
 })
-console.log(results)
 return results
 }
 
@@ -52,8 +51,8 @@ export async function Notes() {
                     <h6 className="card-subtitle mb-2">{`${note.Created.toDate().toLocaleDateString()} - ${note.Created.toDate().toLocaleTimeString()}`}</h6>
                   </div>
                 </div>
-            )))).catch((err) => (
-              <p>Normally, you'd have a nice little section here with nice little post it notes. someone hates fun so this isn't a thing anymore. i'm working on it!</p>
+            )))).catch(() => (
+              <p>Normally, you&apos;d have a nice little section here with nice little post it notes. someone hates fun so this isn&apos;t a thing anymore. i&apos;m working on it!</p>
             ))
             
 
